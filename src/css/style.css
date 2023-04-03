@@ -1,0 +1,21 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Add some space below the header */
+body {
+    padding-top: 70px;
+}
+
+/* Style the content */
+.content {
+    padding: 20px;
+    text-align: center;
+}
