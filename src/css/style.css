@@ -23,9 +23,11 @@ body {
 .button-container {
   text-align: center;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.load-more-button {
+.load-more {
   background-color: #3498db;
   border: none;
   color: #fff;
@@ -37,9 +39,38 @@ body {
   display: none;
 }
 
-.load-more-button:hover {
+.load-more:hover {
   background-color: #2980b9;
 }
 .btn-hidden {
   display: block;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.photo-card {
+  background-color: aliceblue;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 4px 4px 3px 2px #d3d3d3;
+  height: 265px;
+  width: calc(100% / 6 - 10px);
+}
+.photo-card img {
+  display: block;
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+}
+.info-item {
+  display: flex;
+  flex-direction: column;
 }
