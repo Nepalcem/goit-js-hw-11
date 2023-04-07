@@ -18,7 +18,7 @@ let imageCounter = 40;
 function onSearch(e) {
   e.preventDefault();
   hideLoadMoreBtn();
-  input = e.currentTarget.elements.searchQuery.value.trim();
+  let input = e.currentTarget.elements.searchQuery.value.trim();
   pageNumber = 1;
   imageCounter = 40;
   clearHtmlMarkup();
