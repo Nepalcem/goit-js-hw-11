@@ -13,12 +13,13 @@ refs.form.addEventListener('submit', onSearch);
 refs.loadMore.addEventListener('click', onLoadMore);
 
 let pageNumber = 1;
+let input = '';
 let imageCounter = 40;
 
 function onSearch(e) {
   e.preventDefault();
   hideLoadMoreBtn();
-  let input = e.currentTarget.elements.searchQuery.value.trim();
+  input = e.currentTarget.elements.searchQuery.value.trim();
   pageNumber = 1;
   imageCounter = 40;
   clearHtmlMarkup();
