@@ -19,6 +19,7 @@ const fetchImages = async (searchQuery, pageNumber, unique = false) => {
       Notiflix.Notify.warning(
         'Sorry, there are no images matching your search query. Please try again!'
       );
+      return;
     }
     const totalHitsValue = response.data.totalHits;
     if (unique) {
