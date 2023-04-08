@@ -1,5 +1,7 @@
 import refs from './refs';
 
+import 'simplelightbox/dist/simple-lightbox.min.css';
+
 function renderHtmlMarkup(objectsArray) {
   objectsArray.map(imageObject => {
     const {
@@ -13,7 +15,7 @@ function renderHtmlMarkup(objectsArray) {
     } = imageObject;
 
     const markup = `<div class="photo-card">
-    <img src="${webformatURL}" alt="" loading="lazy" width="290"/>
+    <a class="image-link" href="${largeImageURL}"><img src="${webformatURL}" alt="" loading="lazy" width="290"/></a>
     <div class="info">
       <p class="info-item">
         <b>Likes</b>
