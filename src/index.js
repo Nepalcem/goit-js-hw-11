@@ -9,6 +9,7 @@ import {
 } from './js-assets/html-render';
 import Notiflix from 'notiflix';
 import simpleLightbox from 'simplelightbox';
+import imageScroll from './js-assets/scroll';
 
 refs.form.addEventListener('submit', onSearch);
 refs.loadMore.addEventListener('click', onLoadMore);
@@ -49,5 +50,6 @@ async function onLoadMore() {
         );
       }
     })
-    .then(imageLightBox);
+    .then(imageLightBox)
+    .then(imageScroll);
 }
