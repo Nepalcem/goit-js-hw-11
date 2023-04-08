@@ -31,7 +31,10 @@ async function onSearch(e) {
       renderHtmlMarkup(result.imagesArray);
     })
     .then(unHideLoadMoreBtn)
-    .then(imageLightBox);
+    .then(imageLightBox)
+    .catch(error => {
+      console.log('see the notification');
+    });
 }
 
 function imageLightBox() {

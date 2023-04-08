@@ -13,6 +13,10 @@ const parameters = {
 const fetchImages = async (searchQuery, pageNumber, unique = false) => {
   try {
     const params = { ...parameters, q: searchQuery, page: pageNumber };
+    if (!searchQuery) {
+      Notiflix.Notify.failure('Search query is not valid! Try again.');
+      return;
+    }
     const response = await axios.get(BASE_URL, { params });
     const imagesArray = response.data.hits;
     if (imagesArray.length < 1) {
